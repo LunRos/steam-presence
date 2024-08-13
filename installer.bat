@@ -7,7 +7,7 @@ if exist "%startupLocation%\SteamRichPresence.lnk" (
     pause
 ) else (
     echo Installing startup script
-    powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%startupLocation%\SteamRichPresence.lnk');$s.TargetPath='%CD%\windows-run.bat';$s.Save()"
+    powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%startupLocation%\SteamRichPresence.lnk');$s.TargetPath='%CD%\main.py';$s.Save()"
     echo To disable the autorunner rerun this installer
     pause
 )
